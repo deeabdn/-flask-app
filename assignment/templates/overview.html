@@ -1,0 +1,31 @@
+
+
+{% extends 'base.html'%}
+    {% block body %}
+    <h1>OVERVIEW OF COMPANIES, THEIR LOCATION WITH THEIR AVAILABLE JOB TITLES AND SALARIES PER YEAR, THEIR CATEGORIES AND THEIR SHARES</h1>
+    <table class="myTable">
+        <thead>
+            <tr>
+                <th>S/N</th>
+                <th>Company Name</th>
+                <th>Job Title</th>
+                <th>Salary per Year</th>
+                <th>Salaries Reported</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in range(0, overview|length) %}
+                <tr>
+                <td>{{overview[i][0]}}</td>
+                <td>{{overview[i][1]}}</td>
+                <td>{{overview[i][2]}}</td>
+                <td>{{overview[i][3]}}</td>
+                <td>{{overview[i][4]}}</td>
+                <td>{{overview[i][5]}}</td>
+                </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+    {% endblock body%}
